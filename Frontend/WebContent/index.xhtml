@@ -15,6 +15,26 @@
 				<h:inputText value="#{tweetcontroller.tweet.tweetBody}"></h:inputText>  	   	   
     	   </h:panelGrid>
     	   <h:commandButton value="Tweet" action="#{tweetcontroller.addNewTweet}"></h:commandButton>
+    	   <h:commandButton value="View Tweet" action="#{tweetcontroller.getTweetList}"></h:commandButton>
+    	</h:form>
+    	<h:form>
+    	<title> Twitter Feeds</title>
+    	
+    	<div><h2> View  Tweets</h2></div>
+    	<h:dataTable value ="#{tweetcontroller.tweetlist}">
+    	<Column>
+    	<f:facet name ="header">
+    	<outputText value="Tweet"/>
+    	</f:facet>
+    	<h:outputText value="#{tweet.tweetBody}"/>
+    	</Column>
+    	<Column>
+    	<f:facet name="header">
+    	<h:outputText value ="Timestamp"/>
+    	</f:facet>
+    	<h:outputText value ="#{tweet.timestamp}"/>
+    	</Column>
+    	</h:datatable>
     	</h:form>
     </h:body>
 </html>

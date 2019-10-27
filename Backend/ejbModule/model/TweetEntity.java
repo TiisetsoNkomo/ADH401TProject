@@ -39,4 +39,5 @@ public class TweetEntity {
 		
 		this.date = datet;
 	}
+	
 }
